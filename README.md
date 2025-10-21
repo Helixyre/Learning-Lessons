@@ -17,7 +17,13 @@ J’ajoute les chapitres **au fil des commits**.
 
 | Chapitre        | Ce que ça fait                                     |
 | --------------- | -------------------------------------------------- |
-| **00 — LED** 💡 | Fait clignoter la LED intégrée (GPIO 2) à ~1 Hz ⏱️ |
+| **01 — LED** 💡 | Fait clignoter la LED intégrée (GPIO 2) à ~1 Hz ⏱️ |
+| **02 — LED** 💡 | Alterne LED allumer entre PIN2 et GPIO2 w/ BTN |
+| **02b — LED** 💡 | Alterne et maintient LED allumer entre PIN2 et GPIO2 w/ BTN |
+
+## ✨ Schema du chapitre
+
+![alt text](https://docs.freenove.com/projects/fnk0047/en/latest/_images/Chapter02_04.png)
 
 > De nouveaux chapitres sont ajoutés quand j'avance sur mes mini-cours 😉
 

@@ -1,24 +1,21 @@
 #include <Arduino.h>
+#include <ESP32PWM.h>
+#include <math.h>
 
-byte ledPins[] = {15, 2, 0, 4, 5, 18, 19, 21, 22, 23};
-int ledCounts;
+#define PIN_LED   2
+#define CHN       0
+#define FRQ       1000
+#define PWM_BIT   8
+#define BREATHING_SPEED 2.0
 
 void setup() {
-  ledCounts = sizeof(ledPins);
-  for (int i = 0; i < ledCounts; i++) {
-    pinMode(ledPins[i], OUTPUT);
-  }
+  ledcSetup(CHN, FRQ, PWM_BIT);
+  ledcAttachPin(PIN_LED, CHN);
 }
 
 void loop() {
-  for (int i = 0; i < ledCounts; i++) {
-    digitalWrite(ledPins[i], HIGH);
-    delay(100);
-    digitalWrite(ledPins[i], LOW);
-  }
-  for (int i = ledCounts - 1; i > -1; i--) {
-    digitalWrite(ledPins[i], HIGH);
-    delay(100);
-    digitalWrite(ledPins[i], LOW);
-  }
+  float t = millis() / 1000.0;
+  float brightness = pow(sin(t * BREATHING_SPEED), 2) * 255.0;
+  ledcWrite(CHN, (int)brightness);
+  delay(5);
 }

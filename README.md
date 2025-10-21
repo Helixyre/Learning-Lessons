@@ -21,10 +21,11 @@ J’ajoute les chapitres **au fil des commits**.
 | **02 — LED** 💡 | Alterne LED allumer entre PIN2 et GPIO2 w/ BTN |
 | **02b — LED** 💡 | Alterne et maintient LED allumer entre PIN2 et GPIO2 w/ BTN |
 | **03 — LED Bar** 💡 | Utilisation d'une bar LED pour faire une flowing light |
+| **04 — Breathing LED** 💡 | Analog, Digital 'breathing Light' |
 
 ## ✨ Schema du chapitre
 
-![alt text](https://docs.freenove.com/projects/fnk0047/en/latest/_images/Chapter03_02.png)
+![alt text](https://docs.freenove.com/projects/fnk0047/en/latest/_images/Chapter04_02.png)
 
 > De nouveaux chapitres sont ajoutés quand j'avance sur mes mini-cours 😉
 

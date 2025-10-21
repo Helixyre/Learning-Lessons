@@ -1,32 +1,42 @@
 #include <Arduino.h>
-#include <ESP32PWM.h>
+#include <Freenove_WS2812_Lib_for_ESP32.h>
 
-void setColor(byte r, byte g, byte b);
+#define LEDS_COUNT  8
+#define LEDS_PIN    2
+#define CHANNEL     0
 
-const byte ledPins[] = {4, 2, 15};
-const byte chns[] = {0, 1, 2};
-int red, green, blue;
+Freenove_ESP32_WS2812 strip = Freenove_ESP32_WS2812(LEDS_COUNT, LEDS_PIN, CHANNEL, TYPE_GRB);
 
 void setup() {
-  for (int i = 0; i < 3; i++) {   // setup the pwm channels, 1KHz, 8bit
-    ledcSetup(chns[i], 1000, 8);
-    ledcAttachPin(ledPins[i], chns[i]);
-  }
-  randomSeed(analogRead(0));
+	Serial.begin(115200);
+	delay(50);
+	Serial.println("WS2812 diag: set all pixels at once");
+	if (!strip.begin()) {
+		Serial.println("strip.begin() FAILED");
+		while (1) delay(1000);
+	}
+	strip.setBrightness(30); // low power for safety
+
+	// set all pixels at once (one show())
+	uint8_t colors[LEDS_COUNT][3] = {
+		{255,0,0},   // 1 red
+		{0,255,0},   // 2 green
+		{0,0,255},   // 3 blue
+		{255,255,0}, // 4 yellow
+		{255,0,255}, // 5 magenta
+		{0,255,255}, // 6 cyan
+		{255,255,255},// 7 white
+		{128,64,0}   // 8 orange
+	};
+
+	for (int i = 0; i < LEDS_COUNT; i++) {
+		strip.setLedColorData(i, colors[i][0], colors[i][1], colors[i][2]);
+	}
+	strip.show(); // send once
+	Serial.println("Colors sent once. Observe LEDs.");
 }
 
 void loop() {
-  red = random(0, 256);
-  green = random(0, 256);
-  blue = random(0, 256);
-  setColor(red, green, blue);
-  delay(200);
-}
-
-// setColor: write PWM values to the 3 channels
-void setColor(byte r, byte g, byte b) {
-  // If using a common-anode LED, invert values (255 - value)
-  ledcWrite(chns[0], 255 - r);
-  ledcWrite(chns[1], 255 - g);
-  ledcWrite(chns[2], 255 - b);
+	// keep steady for observation
+	delay(1000);
 }

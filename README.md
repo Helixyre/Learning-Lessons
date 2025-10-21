@@ -23,10 +23,11 @@ J’ajoute les chapitres **au fil des commits**.
 | **03 — LED Bar** 💡 | Utilisation d'une bar LED pour faire une flowing light |
 | **04 — Breathing LED** 💡 | Analog, Digital 'breathing Light' |
 | **05 — RGB LED** 💡 | Utilisation de la LED RGB |
+| **06 — LED RING** 💡 | Utilisation du module LED |
 
 ## ✨ Schema du chapitre
 
-![alt text](https://docs.freenove.com/projects/fnk0047/en/latest/_images/Chapter05_03.png)
+![alt text](https://docs.freenove.com/projects/fnk0047/en/latest/_images/Chapter06_03.png)
 
 > De nouveaux chapitres sont ajoutés quand j'avance sur mes mini-cours 😉
 

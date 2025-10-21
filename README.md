@@ -18,7 +18,7 @@ J’ajoute les chapitres **au fil des commits**.
 | Chapitre        | Ce que ça fait                                     |
 | --------------- | -------------------------------------------------- |
 | **01 — LED** 💡 | Fait clignoter la LED intégrée (GPIO 2) à ~1 Hz ⏱️ |
-| **01 — LED** 💡 | Alterne LED allumer entre PIN2 et GPIO2 w/ BTN |
+| **02 — LED** 💡 | Alterne LED allumer entre PIN2 et GPIO2 w/ BTN |
 
 > De nouveaux chapitres sont ajoutés quand j'avance sur mes mini-cours 😉
 

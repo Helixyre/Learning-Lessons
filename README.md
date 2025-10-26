@@ -27,10 +27,11 @@ J’ajoute les chapitres **au fil des commits**.
 | **07 — Buzzer** 💡 | Utilisation du Buzzer en mode sonette |
 | **08 — Serial** 💡 | Communication Serial |
 | **09 — AD/DA Converter** 💡 | Analog <-> Digital |
+| **10 — Lampe Touche** 💡 | Touch sensor |
 
 ## ✨ Schema du chapitre
 
-![alt text](https://docs.freenove.com/projects/fnk0047/en/latest/_images/Chapter09_07.png)
+![alt text](https://docs.freenove.com/projects/fnk0047/en/latest/_images/Chapter10_06.png)
 
 > De nouveaux chapitres sont ajoutés quand j'avance sur mes mini-cours 😉
 

@@ -1,18 +1,11 @@
 #include <Arduino.h>
-#include <Adafruit_NeoPixel.h>
-
-#define PIN_BUZZER 13
-#define PIN_BUTTON 4
 
 void setup() {
-  pinMode(PIN_BUZZER, OUTPUT);
-  pinMode(PIN_BUTTON, INPUT);
+  Serial.begin(115200);
+  Serial.println("Hello, ESP32!");
 }
 
 void loop() {
-  if (digitalRead(PIN_BUTTON) == LOW) {
-    digitalWrite(PIN_BUZZER,HIGH);
-  }else{
-    digitalWrite(PIN_BUZZER,LOW);
-  }
+  Serial.println("Running, ESP32!");
+  delay(1000);
 }

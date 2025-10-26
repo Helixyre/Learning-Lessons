@@ -26,10 +26,11 @@ J’ajoute les chapitres **au fil des commits**.
 | **06 — LED MODULE** 💡 | Utilisation du module LED en RROD |
 | **07 — Buzzer** 💡 | Utilisation du Buzzer en mode sonette |
 | **08 — Serial** 💡 | Communication Serial |
+| **09 — AD/DA Converter** 💡 | Analog <-> Digital |
 
 ## ✨ Schema du chapitre
 
-![alt text](https://docs.freenove.com/projects/fnk0047/en/latest/_images/Chapter08_02.png)
+![alt text](https://docs.freenove.com/projects/fnk0047/en/latest/_images/Chapter09_07.png)
 
 > De nouveaux chapitres sont ajoutés quand j'avance sur mes mini-cours 😉
 

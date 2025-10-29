@@ -28,10 +28,13 @@ J’ajoute les chapitres **au fil des commits**.
 | **08 — Serial** 💡 | Communication Serial |
 | **09 — AD/DA Converter** 💡 | Analog <-> Digital |
 | **10 — Lampe Touche** 💡 | Touch sensor |
+| **11 - Potentiometre** 💡 | Potentiometre |
+| **12 - Photoresistance** 💡 | utilisation de la photoresistance |
+
 
 ## ✨ Schema du chapitre
 
-![alt text](https://docs.freenove.com/projects/fnk0047/en/latest/_images/Chapter10_06.png)
+![alt text](https://docs.freenove.com/projects/fnk0047/en/latest/_images/Chapter12_02.png)
 
 > De nouveaux chapitres sont ajoutés quand j'avance sur mes mini-cours 😉
 

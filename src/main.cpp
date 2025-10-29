@@ -1,31 +1,24 @@
 #include <Arduino.h>
 
-#define PIN_LED   2
-#define PRESS_VAL 14
-#define RELEASE_VAL 25
+#define PIN_ANALOG_IN   4
+#define PIN_LED         12
+#define CHAN            0
+#define LIGHT_MIN       372
+#define LIGHT_MAX       2048
 
-void reverseGPIO(int pin) {
-  digitalWrite(pin, !digitalRead(pin));
-}
-
-bool isProcessed = false;
 void setup() {
   Serial.begin(115200);
-  pinMode(PIN_LED, OUTPUT);
+  // initialize LEDC: channel, frequency(Hz), resolution(bits)
+  ledcSetup(CHAN, 1000, 12);
+  ledcAttachPin(PIN_LED, CHAN);
 }
-void loop() {
-  if (touchRead(T0) < PRESS_VAL) {
-    if (!isProcessed) {
-      isProcessed = true;
-      Serial.println("Touch detected! ");
-      reverseGPIO(PIN_LED);
-    }
-  }
 
-  if (touchRead(T0) > RELEASE_VAL) {
-    if (isProcessed) {
-      isProcessed = false;
-      Serial.println("Released! ");
-    }
-  }
+void loop() {
+  int adcVal = analogRead(PIN_ANALOG_IN); // read ADC
+  int pwmVal = map(constrain(adcVal, LIGHT_MIN, LIGHT_MAX), LIGHT_MIN, LIGHT_MAX, 0, 4095);  // map to 12-bit range
+  pwmVal = constrain(pwmVal, 0, 4095);
+  // Use channel (CHAN) as first parameter. Passing the pin here caused "LEDC is not initialized" because
+  // the wrong channel index was used.
+  ledcWrite(CHAN, pwmVal);    // set the pulse width on the configured channel
+  delay(10);
 }

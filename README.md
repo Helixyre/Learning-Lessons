@@ -30,11 +30,12 @@ J’ajoute les chapitres **au fil des commits**.
 | **10 — Lampe Touche** 💡 | Touch sensor |
 | **11 - Potentiometre** 💡 | Potentiometre |
 | **12 - Photoresistance** 💡 | utilisation de la photoresistance |
+| **13 - Thermistor** 💡 | Relever la temperature |
 
 
 ## ✨ Schema du chapitre
 
-![alt text](https://docs.freenove.com/projects/fnk0047/en/latest/_images/Chapter12_02.png)
+![alt text](https://docs.freenove.com/projects/fnk0047/en/latest/_images/Chapter13_05.png)
 
 > De nouveaux chapitres sont ajoutés quand j'avance sur mes mini-cours 😉
 
